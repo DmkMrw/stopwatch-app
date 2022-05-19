@@ -1,12 +1,17 @@
 import styles from './Timer.module.scss';
 
+const Timer = ({ timer }) => {
+     let hours = Math.floor((timer / (1000 * 60 * 60)) % 24);
+     let minutes = ("0" + Math.floor((timer / 60000) % 60)).slice(-2);
+     let seconds = ("0" + Math.floor((timer / 1000) % 60)).slice(-2);
+     let milliseconds = ("0" + ((timer / 10) % 100)).slice(-2);
 
-const Timer = ({hours, minutes, seconds, milliseconds}) => {
+
 
      return (
 
           <div className={styles.timer}>
-               <h1>{hours}:{minutes}:{seconds}:{milliseconds}</h1>
+               <div className={styles.time}><h1>{hours}:{minutes}:{seconds}:{milliseconds}</h1></div>
           </div>
 
      );
