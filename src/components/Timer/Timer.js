@@ -1,10 +1,14 @@
 import styles from './Timer.module.scss';
 
-const Timer = () => {
+
+const Timer = ({hours, minutes, seconds, miliseconds}) => {
+
      return (
+
           <div className={styles.timer}>
-               <h1>00:00:00.000</h1>
+               <h1>{hours}:{minutes}:{seconds}:{miliseconds}</h1>
           </div>
+
      );
 }
 
