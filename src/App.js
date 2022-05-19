@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/Button/Button";
+import Container from "./Container/Container";
+import Timer from "./components/Timer/Timer"
+import './styles/global.scss';
+import './styles/normalize.scss';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+        <Timer/>
+        <div className="btn">
+          <Button>Start</Button>
+          <Button>Stop</Button>
+          <Button>Reset</Button>
+        </div>
+      </Container>
   );
 }
 
